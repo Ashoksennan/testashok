@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar" />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_5"
+        android:elevation="@dimen/margin_5"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/ur_email"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:focusable="false"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/feedback_email" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/subject"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/subject_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:color/white"
+                    android:hint="@string/subject"
+                    android:padding="@dimen/margin_5"
+                    android:textSize="@dimen/dimen_16sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/message"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/msg_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="top"
+
+                    android:hint="@string/enter_message"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:padding="@dimen/margin_5"
+                    android:textSize="@dimen/dimen_16sp" />
+
+                <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:background="@drawable/bg_button"
+
+                    android:elevation="5dp"
+                    android:minHeight="@dimen/dimen_50dp"
+                    android:text="@string/send"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dimen_18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
